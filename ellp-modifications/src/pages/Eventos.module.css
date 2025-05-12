@@ -1,0 +1,115 @@
+.page {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  color: orangered;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: purple;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+}
+
+.homeIcon {
+  display: none;
+  font-size: 20px;
+}
+
+.homeLink:hover .homeText {
+  display: none;
+}
+
+.homeLink:hover .homeIcon {
+  display: inline;
+}
+
+.eventoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.titulo {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.descricao {
+  font-size: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 10px 0;
+}
+
+.imagem {
+  width: 80%;
+  max-height: 400px;
+  object-fit: contain;
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: #f7941d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(0.95);
+}
+
+.pagination {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.pageNumber,
+.pageArrow {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  transition: background 0.3s;
+}
+
+.pageNumber:hover,
+.pageArrow:hover {
+  background-color: #f7941d;
+}
+
+.active {
+  background-color: #f7941d;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
