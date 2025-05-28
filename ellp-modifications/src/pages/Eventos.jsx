@@ -1,82 +1,85 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Eventos.module.css';
+import { FaArrowRight, FaArrowLeft, FaHome } from "react-icons/fa";
 
 const eventos = [
   {
     id: 1,
-    titulo: "Vistiq - Spa Wellness",
-    descricao: "(PALESTRAS)",
-    imagem: "/imagens/spa.png",
-    categoria: "Web Design"
+    titulo: "Trabalho",
+    descricao: "(PESSOAS TRABALHANDO)",
+    imagem: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    categoria: "Work"
   },
   {
     id: 2,
-    titulo: "Avenzor - Portfolio",
-    descricao: "(PALESTRAS)",
-    imagem: "/imagens/portfolio.png",
-    categoria: "Web Design"
+    titulo: "Feira de Inovação Tecnológica",
+    descricao: "(EXPOSIÇÃO)",
+    imagem: "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
+    categoria: "Tecnologia"
   },
-  // Adicione mais eventos aqui
+  {
+    id: 3,
+    titulo: "Encontro Gastronômico",
+    descricao: "(FEIRA DE COMIDA)",
+    imagem: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0",
+    categoria: "Culinária"
+  },
+  {
+    id: 4,
+    titulo: "Corrida e Saúde",
+    descricao: "(ESPORTE E BEM-ESTAR)",
+    imagem: "https://images.unsplash.com/photo-1477332552946-cfb384aeaf1c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    categoria: "Esporte"
+  },
+  {
+    id: 5,
+    titulo: "Oficina de Arte",
+    descricao: "(ATIVIDADE CRIATIVA)",
+    imagem: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9",
+    categoria: "Cultura"
+  }
 ];
 
-function Eventos() {
+const Eventos = () => {
   const [paginaAtual, setPaginaAtual] = useState(0);
-
-  const eventosPorPagina = 1;
-  const totalPaginas = Math.ceil(eventos.length / eventosPorPagina);
-  const eventoAtual = eventos[paginaAtual];
-
-  const handleScroll = (e) => {
-    if (e.deltaY > 0 && paginaAtual < totalPaginas - 1) {
-      setPaginaAtual(p => p + 1);
-    } else if (e.deltaY < 0 && paginaAtual > 0) {
-      setPaginaAtual(p => p - 1);
-    }
-  };
-
-  const mudarPagina = (index) => {
-    setPaginaAtual(index);
-  };
+  const evento = eventos[paginaAtual];
+  const totalPaginas = eventos.length;
 
   return (
-    <div className={styles.page} onWheel={handleScroll}>
-      <div className={styles.header}>
-        <Link to="/" className={styles.homeLink}>
-          <span className={styles.homeText}>HOME</span>
-          <span className={styles.homeIcon}>🏠</span>
-        </Link>
-      </div>
+    <div className={styles.eventoContainer}>
+      {/* Botão Home */}
+      <Link to="/" className={styles.homeLink}>
+        <FaHome className={styles.homeIcon} />
+        <span className={styles.homeText}>Início</span>
+      </Link>
 
-      <div className={styles.eventoContainer}>
-        <p className={styles.descricao}>{eventoAtual.descricao}</p>
-        <h1 className={styles.titulo}>{eventoAtual.titulo}</h1>
-        <div className={styles.info}>
-          <span>Category:</span>
-          <span>{eventoAtual.categoria}</span>
-        </div>
-        <img className={styles.imagem} src={eventoAtual.imagem} alt={eventoAtual.titulo} />
-        <Link to={`/Eventos_Especificos/${eventoAtual.id}`}>
-          <button className={styles.btn}>Saber Mais</button>
-        </Link>
-      </div>
+      {/* Conteúdo do evento */}
+      <img src={evento.imagem} alt={evento.titulo} className={styles.imagem} />
+      <h2>{evento.titulo}</h2>
+      <p>{evento.descricao}</p>
+      <p>{evento.data}12/03/2025</p>
+      <p><strong>Categoria:</strong> {evento.categoria}</p>
 
-      <div className={styles.pagination}>
-        {[...Array(totalPaginas)].map((_, i) => (
-          <span
-            key={i}
-            onClick={() => mudarPagina(i)}
-            className={`${styles.pageNumber} ${paginaAtual === i ? styles.active : ''}`}
-          >
-            {i + 1}
-          </span>
-        ))}
+      <button className={styles.btn}>Saiba mais</button>
+
+      {/* Navegação entre eventos */}
+      <div style={{ display: "flex", gap: "1rem", marginTop: "2rem" }}>
+        {paginaAtual > 0 && (
+          <FaArrowLeft
+            className={styles.pageArrow}
+            onClick={() => setPaginaAtual(paginaAtual - 1)}
+          />
+        )}
         {paginaAtual < totalPaginas - 1 && (
-          <span className={styles.pageArrow} onClick={() => setPaginaAtual(paginaAtual + 1)}>{'>'}</span>
+          <FaArrowRight
+            className={styles.pageArrow}
+            onClick={() => setPaginaAtual(paginaAtual + 1)}
+          />
         )}
       </div>
     </div>
   );
-}
+};
 
 export default Eventos;
