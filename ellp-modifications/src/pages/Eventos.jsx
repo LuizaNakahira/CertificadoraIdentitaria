@@ -36,7 +36,7 @@ const eventos = [
     id: 5,
     titulo: "Oficina de Arte",
     descricao: "(ATIVIDADE CRIATIVA)",
-    imagem: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9",
+    imagem: "https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     categoria: "Cultura"
   }
 ];
@@ -61,7 +61,10 @@ const Eventos = () => {
       <p>{evento.data}12/03/2025</p>
       <p><strong>Categoria:</strong> {evento.categoria}</p>
 
-      <button className={styles.btn}>Saiba mais</button>
+      <Link to={`/eventos/${evento.id}`}>
+        <button className={styles.btn}>Saiba mais</button>
+      </Link>
+
 
       {/* Navegação entre eventos */}
       <div style={{ display: "flex", gap: "1rem", marginTop: "2rem" }}>
