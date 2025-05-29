@@ -11,9 +11,11 @@ function Home() {
                 </div>
             </Link>
 
-            <div className={styles.menuItem}>
-                <h2>VOLUNTARIOS</h2>
-            </div>
+            <Link to="/Voluntarios" className={styles.link}>
+                <div className={styles.menuItem}>
+                    <h2>VOLUNTÁRIOS</h2>
+                </div>
+            </Link>
         </main>
 
         <h1 className={styles.brand}>ELLP</h1>      

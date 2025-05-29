@@ -1,0 +1,182 @@
+.container {
+  padding: 2rem;
+  background-color: #f2f7fc;
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  color: #026cb8;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cartao {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  max-width: 250px;
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-5px);
+}
+
+.foto {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.nome {
+  font-size: 1.25rem;
+  color: #002960;
+  margin-bottom: 0.5rem;
+}
+
+.funcao {
+  font-size: 1rem;
+  color: #666;
+}
+
+.homeLink {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e4d6ca;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-shadow: 0 0 7px rgb(252, 252, 252);
+}
+
+.homeLink:hover {
+  background-color: rgb(0, 41, 96);
+}
+
+.homeIcon {
+  font-size: 20px;
+  color: #F68D2E;
+}
+
+.homeText {
+  display: inline;
+  color: #F68D2E;
+}
+.eventoContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.1s ease;
+   min-height: 100vh; 
+  padding: 2rem;
+}
+
+/* container, titulo, lista, cartao, etc. permanecem iguais */
+
+.cardOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* sombra escura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.cardContent {
+  background-color: white;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.cardFoto {
+  width: 150px;  /* tamanho menor */
+  height: 150px;
+  border-radius: 50%; /* foto redonda */
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 4px solid #026cb8; /* contorno azul bonito */
+}
+
+.cardNome {
+  font-size: 2rem;
+  color: #026cb8;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.cardFuncao {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.cardBio {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.cardClose {
+  background-color: #026cb8;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cardClose:hover {
+  background-color: #014a86;
+}
+.cardHistoria,
+.cardDetalhesFuncao {
+  text-align: left;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.cardHistoria strong,
+.cardDetalhesFuncao strong {
+  color: #026cb8;
+}

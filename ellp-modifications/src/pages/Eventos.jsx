@@ -51,7 +51,7 @@ const Eventos = () => {
       {/* Botão Home */}
       <Link to="/" className={styles.homeLink}>
         <FaHome className={styles.homeIcon} />
-        <span className={styles.homeText}>Início</span>
+        <span className={styles.homeText}>Home</span>
       </Link>
 
       {/* Conteúdo do evento */}

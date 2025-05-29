@@ -1,12 +1,15 @@
 .container {
   font-family: Arial, sans-serif;
-  color: #000;
-  background: white;
+  background: #026CB8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
   padding: 1rem;
+}
+
+.menuItem h2 {
+  color: #002960;
 }
 
 .main {
@@ -28,7 +31,6 @@
   font-weight: bold;
   cursor: pointer;
   padding: 20px;
-  color: black;
   width: 100%;
   overflow: hidden;
   transition: color 0.3s ease, transform 0.2s ease;
@@ -49,11 +51,6 @@
 
 .menuItem:hover::before {
   left: 0;
-}
-
-.menuItem:hover {
-  color: white;
-  transform: scale(0.98);
 }
 
 .menuItem > * {
