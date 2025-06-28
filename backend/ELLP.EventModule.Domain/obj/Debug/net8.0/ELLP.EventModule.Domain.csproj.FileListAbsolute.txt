@@ -1,0 +1,12 @@
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/bin/Debug/net8.0/ELLP.EventModule.Domain.deps.json
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/bin/Debug/net8.0/ELLP.EventModule.Domain.dll
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/bin/Debug/net8.0/ELLP.EventModule.Domain.pdb
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/obj/Debug/net8.0/ELLP.EventModule.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/obj/Debug/net8.0/ELLP.EventModule.Domain.AssemblyInfoInputs.cache
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/obj/Debug/net8.0/ELLP.EventModule.Domain.AssemblyInfo.cs
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/obj/Debug/net8.0/ELLP.EventModule.Domain.csproj.CoreCompileInputs.cache
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/obj/Debug/net8.0/ELLP.EventModule.Domain.sourcelink.json
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/obj/Debug/net8.0/ELLP.EventModule.Domain.dll
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/obj/Debug/net8.0/refint/ELLP.EventModule.Domain.dll
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/obj/Debug/net8.0/ELLP.EventModule.Domain.pdb
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Domain/obj/Debug/net8.0/ref/ELLP.EventModule.Domain.dll

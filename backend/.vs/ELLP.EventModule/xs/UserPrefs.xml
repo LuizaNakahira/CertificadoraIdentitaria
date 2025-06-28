@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{766FE5B4-9A22-4A7D-AF43-0BC794A4674D}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ELLP.EventModule.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ELLP.EventModule.Domain/Event.cs">
+    <Files>
+      <File FileName="ELLP.EventModule.Core/DTOS/EventDto.cs" Line="8" Column="36" />
+      <File FileName="ELLP.EventModule.Core/Interfaces/IEventService.cs" Line="15" Column="1" />
+      <File FileName="ELLP.EventModule.Domain/Event.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ELLP.EventModule" expanded="True">
+            <Node name="ELLP.EventModule.Api" expanded="True" />
+            <Node name="ELLP.EventModule.Core">
+              <Node name="Interfaces" expanded="True" />
+            </Node>
+            <Node name="ELLP.EventModule.Domain" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Event.cs" selected="True" />
+            </Node>
+            <Node name="ELLP.EventModule.Infra" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

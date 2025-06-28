@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ELLP.EventModule.Core/1.0.0": {
+        "dependencies": {
+          "ELLP.EventModule.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ELLP.EventModule.Core.dll": {}
+        }
+      },
+      "ELLP.EventModule.Domain/1.0.0": {
+        "runtime": {
+          "ELLP.EventModule.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ELLP.EventModule.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ELLP.EventModule.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
