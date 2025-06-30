@@ -4,11 +4,13 @@ using ELLP.EventModule.Infra.Data;
 using ELLP.EventModule.Core.Interfaces;
 using ELLP.EventModule.Core.Services;
 using ELLP.EventModule.Infra.Repositories;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure EF Core
+// Configure EF Core para PostgreSQL
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Registrar repositórios e serviços:
 builder.Services.AddScoped<IEventRepository, EventRepository>();
