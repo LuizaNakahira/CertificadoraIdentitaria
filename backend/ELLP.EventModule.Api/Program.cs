@@ -25,10 +25,22 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "ELLP Event Module API", Version = "v1" });
 });
 
+// Configura CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
+// Configure o pipeline HTTP
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -38,6 +50,24 @@ if (app.Environment.IsDevelopment())
         c.RoutePrefix = string.Empty; // Define o Swagger como página inicial
     });
 }
+
+// Inicializa o banco de dados com dados de exemplo
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        // Inicializa o banco de dados com dados de teste
+        DbInitializer.InitializeAsync(services).Wait();
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Ocorreu um erro ao inicializar o banco de dados.");
+    }
+}
+
+app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

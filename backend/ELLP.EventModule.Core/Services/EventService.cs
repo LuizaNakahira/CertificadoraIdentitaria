@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using ELLP.EventModule.Core.DTOs;
 using ELLP.EventModule.Core.Interfaces;
@@ -10,6 +11,7 @@ namespace ELLP.EventModule.Core.Services
 	public class EventService : IEventService
     {
         private readonly IEventRepository _eventRepository;
+        
         public EventService(IEventRepository eventRepository)
 		{
             _eventRepository = eventRepository;
@@ -24,10 +26,21 @@ namespace ELLP.EventModule.Core.Services
             return MapToDto(@event);
         }
 
-        public async Task<IEnumerable<EventDto>> GetEventsAsync(int page, int pageSize)
-            {
+        public async Task<PaginatedResponseDto<EventDto>> GetEventsAsync(int page, int pageSize)
+        {
             var events = await _eventRepository.GetAllAsync(page, pageSize);
-            return events.Select(e => MapToDto(e));
+            var totalEvents = await _eventRepository.CountAsync();
+            
+            var eventDtos = events.Select(e => MapToDto(e)).ToList();
+            
+            return new PaginatedResponseDto<EventDto>
+            {
+                Items = eventDtos,
+                PageNumber = page,
+                PageSize = pageSize,
+                TotalItems = totalEvents,
+                TotalPages = (int)Math.Ceiling(totalEvents / (double)pageSize)
+            };
         }
 
         private EventDto MapToDto(Event @event)

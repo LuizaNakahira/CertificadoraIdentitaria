@@ -34,5 +34,10 @@ namespace ELLP.EventModule.Infra.Repositories
                 .Include(e => e.EventVolunteers)
                 .FirstOrDefaultAsync(e => e.Id == id);
         }
+
+        public async Task<int> CountAsync()
+        {
+            return await _context.Events.CountAsync();
+        }
     }
 }
