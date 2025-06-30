@@ -7,7 +7,7 @@ using ELLP.EventModule.Core.Interfaces;
 namespace ELLP.EventModule.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class EventsController : ControllerBase
     {
         private readonly IEventService _eventService;
@@ -17,13 +17,13 @@ namespace ELLP.EventModule.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        public async Task<IActionResult> GetAll([FromQuery] int page, [FromQuery] int pageSize)
         {
             var events = await _eventService.GetEventsAsync(page, pageSize);
             return Ok(events);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("EventId/{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             var @event = await _eventService.GetEventByIdAsync(id);

@@ -28,74 +28,74 @@ namespace ELLP.EventModule.Infra.Data
                 new Event 
                 { 
                     Nome = "Workshop de Programação",
-                    DataInicio = DateTime.Now.AddDays(10),
-                    DataFim = DateTime.Now.AddDays(10).AddHours(4)
+                    DataInicio = DateTime.UtcNow.AddDays(10),
+                    DataFim = DateTime.UtcNow.AddDays(10).AddHours(4)
                 },
                 new Event 
                 { 
                     Nome = "Palestra sobre Inteligência Artificial",
-                    DataInicio = DateTime.Now.AddDays(15),
-                    DataFim = DateTime.Now.AddDays(15).AddHours(2)
+                    DataInicio = DateTime.UtcNow.AddDays(15),
+                    DataFim = DateTime.UtcNow.AddDays(15).AddHours(2)
                 },
                 new Event 
                 { 
                     Nome = "Curso de Machine Learning",
-                    DataInicio = DateTime.Now.AddDays(20),
-                    DataFim = DateTime.Now.AddDays(25)
+                    DataInicio = DateTime.UtcNow.AddDays(20),
+                    DataFim = DateTime.UtcNow.AddDays(25)
                 },
                 new Event 
                 { 
                     Nome = "Hackathon ELLP",
-                    DataInicio = DateTime.Now.AddDays(30),
-                    DataFim = DateTime.Now.AddDays(32)
+                    DataInicio = DateTime.UtcNow.AddDays(30),
+                    DataFim = DateTime.UtcNow.AddDays(32)
                 },
                 new Event 
                 { 
                     Nome = "Encontro de Desenvolvedores",
-                    DataInicio = DateTime.Now.AddDays(5),
-                    DataFim = DateTime.Now.AddDays(5).AddHours(3)
+                    DataInicio = DateTime.UtcNow.AddDays(5),
+                    DataFim = DateTime.UtcNow.AddDays(5).AddHours(3)
                 },
                 new Event 
                 { 
                     Nome = "Conferência de Tecnologia",
-                    DataInicio = DateTime.Now.AddDays(45),
-                    DataFim = DateTime.Now.AddDays(47)
+                    DataInicio = DateTime.UtcNow.AddDays(45),
+                    DataFim = DateTime.UtcNow.AddDays(47)
                 },
                 new Event 
                 { 
                     Nome = "Workshop de Design UI/UX",
-                    DataInicio = DateTime.Now.AddDays(12),
-                    DataFim = DateTime.Now.AddDays(12).AddHours(8)
+                    DataInicio = DateTime.UtcNow.AddDays(12),
+                    DataFim = DateTime.UtcNow.AddDays(12).AddHours(8)
                 },
                 new Event 
                 { 
                     Nome = "Meetup de Python",
-                    DataInicio = DateTime.Now.AddDays(8),
-                    DataFim = DateTime.Now.AddDays(8).AddHours(3)
+                    DataInicio = DateTime.UtcNow.AddDays(8),
+                    DataFim = DateTime.UtcNow.AddDays(8).AddHours(3)
                 },
                 new Event 
                 { 
                     Nome = "Curso de Desenvolvimento Web",
-                    DataInicio = DateTime.Now.AddDays(25),
-                    DataFim = DateTime.Now.AddDays(27)
+                    DataInicio = DateTime.UtcNow.AddDays(25),
+                    DataFim = DateTime.UtcNow.AddDays(27)
                 },
                 new Event 
                 { 
                     Nome = "Palestra sobre Blockchain",
-                    DataInicio = DateTime.Now.AddDays(18),
-                    DataFim = DateTime.Now.AddDays(18).AddHours(2)
+                    DataInicio = DateTime.UtcNow.AddDays(18),
+                    DataFim = DateTime.UtcNow.AddDays(18).AddHours(2)
                 },
                 new Event 
                 { 
                     Nome = "Workshop de Cloud Computing",
-                    DataInicio = DateTime.Now.AddDays(35),
-                    DataFim = DateTime.Now.AddDays(35).AddHours(6)
+                    DataInicio = DateTime.UtcNow.AddDays(35),
+                    DataFim = DateTime.UtcNow.AddDays(35).AddHours(6)
                 },
                 new Event 
                 { 
                     Nome = "Curso de Segurança da Informação",
-                    DataInicio = DateTime.Now.AddDays(40),
-                    DataFim = DateTime.Now.AddDays(42)
+                    DataInicio = DateTime.UtcNow.AddDays(40),
+                    DataFim = DateTime.UtcNow.AddDays(42)
                 }
             };
             
