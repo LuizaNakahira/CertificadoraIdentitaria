@@ -4,13 +4,10 @@ using ELLP.EventModule.Infra.Data;
 using ELLP.EventModule.Core.Interfaces;
 using ELLP.EventModule.Core.Services;
 using ELLP.EventModule.Infra.Repositories;
-using Npgsql.EntityFrameworkCore.PostgreSQL;
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure EF Core para PostgreSQL
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Registrar repositórios e serviços:
 builder.Services.AddScoped<IEventRepository, EventRepository>();
@@ -23,6 +20,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "ELLP Event Module API", Version = "v1" });
+    c.EnableAnnotations();
 });
 
 // Configura CORS
@@ -47,7 +45,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "ELLP Event Module API v1");
-        c.RoutePrefix = string.Empty; // Define o Swagger como página inicial
+        c.RoutePrefix = string.Empty; 
     });
 }
 
