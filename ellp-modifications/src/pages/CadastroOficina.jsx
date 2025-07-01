@@ -57,11 +57,11 @@ function handleSubmit(e) {
   </div>
 
   <div className={styles.formGroup}>
-    <label>Nome</label>
+    <label>Tema</label>
     <input
       type="text"
       name="nome"
-      placeholder="Nome"
+      placeholder="Tema da Oficina"
       value={form.nome}
       onChange={handleChange}
       required
