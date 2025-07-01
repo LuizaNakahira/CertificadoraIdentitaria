@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import styles from './CadastroOficina.module.css';
 
 export default function CadastroOficina() {
   const navigate = useNavigate();
@@ -41,72 +42,90 @@ function handleSubmit(e) {
 }
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 space-y-4 max-w-md mx-auto">
-      <h2 className="text-xl font-bold">Nova Oficina</h2>
+    <form onSubmit={handleSubmit} className={styles.formContainer}>
+      <h2>Nova Oficina</h2>
 
-      <input
-        type="file"
-        name="imagem"
-        accept="image/*"
-        onChange={handleChange}
-        required
-      />
+  <div className={styles.formGroup}>
+    <label>Imagem</label>
+    <input
+      type="file"
+      name="imagem"
+      accept="image/*"
+      onChange={handleChange}
+      required
+    />
+  </div>
 
-      <input
-        type="text"
-        name="nome"
-        placeholder="Nome"
-        value={form.nome}
-        onChange={handleChange}
-        className="border p-2 w-full"
-        required
-      />
+  <div className={styles.formGroup}>
+    <label>Nome</label>
+    <input
+      type="text"
+      name="nome"
+      placeholder="Nome"
+      value={form.nome}
+      onChange={handleChange}
+      required
+    />
+  </div>
 
-      <input
-        type="text"
-        name="area"
-        placeholder="Tecnologia, Social, Ensino,..."
-        value={form.area}
-        onChange={handleChange}
-        className="border p-2 w-full"
-        required
-      />
+  <div className={styles.formGroup}>
+    <label>Área</label>
+    <input
+      type="text"
+      name="area"
+      placeholder="Tecnologia, Social, Ensino,..."
+      value={form.area}
+      onChange={handleChange}
+      required
+    />
+  </div>
 
-      <input
-        type="date"
-        name="data"
-        value={form.data}
-        onChange={handleChange}
-        className="border p-2 w-full"
-        required
-      />
+  <div className={styles.formGroup}>
+    <label>Data</label>
+    <input
+      type="date"
+      name="data"
+      value={form.data}
+      onChange={handleChange}
+      required
+    />
+  </div>
 
-      <textarea
-        name="descricao"
-        maxLength={342}
-        placeholder="Descrição (até 342 caracteres)"
-        value={form.descricao}
-        onChange={handleChange}
-        className="border p-2 w-full"
-        required
-      />
+  <div className={styles.formGroup}>
+    <label>Descrição</label>
+    <textarea
+      name="descricao"
+      maxLength={342}
+      placeholder="Descrição (até 342 caracteres)"
+      value={form.descricao}
+      onChange={handleChange}
+      required
+    />
+  </div>
 
-      <input
-        type="text"
-        name="local"
-        placeholder="Local"
-        value={form.local}
-        onChange={handleChange}
-        className="border p-2 w-full"
-        required
-      />
+  <div className={styles.formGroup}>
+    <label>Local</label>
+    <input
+      type="text"
+      name="local"
+      placeholder="Local"
+      value={form.local}
+      onChange={handleChange}
+      required
+    />
+  </div>
 
-      <button
-        type="submit"
-        className="bg-green-600 text-white px-4 py-2 rounded"
-      >
-        Salvar Oficina
-      </button>
+  <div className="flex justify-end space-x-2">
+  <button
+    type="button"
+    onClick={() => navigate('/')}
+    className="bg-gray-400 text-white px-4 py-2 rounded"
+  >
+    Voltar
+  </button>
+</div>
+
+  <button type="submit">Salvar Oficina</button>
     </form>
   );
 }

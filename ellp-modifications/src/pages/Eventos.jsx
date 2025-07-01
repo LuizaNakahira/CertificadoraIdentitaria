@@ -50,20 +50,20 @@ function Eventos() {
 
   return (
     <div className={styles.page} onWheel={handleScroll}>
-      <div className={styles.header}>
-        <Link to="/" className={styles.homeLink}>
-          <span className={styles.homeText}>HOME</span>
-          <span className={styles.homeIcon}>🏠</span>
-        </Link>
+ <div className={styles.header}>
+  <Link to="/" className={styles.homeLink}>
+    <span className={styles.homeText}>HOME</span>
+    <span className={styles.homeIcon}>🏠</span>
+  </Link>
 
-        <button
-          onClick={() => navigate('/oficinas/nova')}
-          className={styles.btn}
-          style={{ marginLeft: 'auto' }}
-        >
-          Cadastrar Oficina
-        </button>
-      </div>
+  <button
+    onClick={() => navigate('/oficinas/nova')}
+    className={styles.btn}
+  >
+    Cadastrar Oficina
+  </button>
+</div>
+
 
       {eventoAtual && (
         <div className={styles.eventoContainer}>

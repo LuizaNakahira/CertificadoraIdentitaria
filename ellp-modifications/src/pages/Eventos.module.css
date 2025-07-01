@@ -8,9 +8,12 @@
 }
 
 .header {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* adiciona espaçamento */
+  width: 100%;
+  box-sizing: border-box; /* importante para o padding não estourar a largura */
 }
 
 .homeLink {
