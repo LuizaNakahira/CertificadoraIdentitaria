@@ -20,6 +20,8 @@ namespace ELLP.EventModule.Infra.Repositories
         public async Task<IEnumerable<Volunteer>> GetAllAsync(int page, int pageSize)
         {
             return await _context.Volunteers
+                .Include(v => v.EventVolunteers)
+                .ThenInclude(ev => ev.Event)
                 .OrderBy(v => v.Nome)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
@@ -39,6 +41,8 @@ namespace ELLP.EventModule.Infra.Repositories
             return await _context.EventVolunteers
                 .Where(ev => ev.EventId == eventId)
                 .Include(ev => ev.Volunteer)
+                    .ThenInclude(v => v.EventVolunteers)
+                    .ThenInclude(ev => ev.Event)
                 .OrderBy(ev => ev.Volunteer.Nome)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
@@ -49,13 +53,13 @@ namespace ELLP.EventModule.Infra.Repositories
         public async Task<int> CountAsync()
         {
             return await _context.Volunteers.CountAsync();
-        }
+    }
 
         public async Task<int> CountByEventIdAsync(int eventId)
         {
             return await _context.EventVolunteers
                 .Where(ev => ev.EventId == eventId)
                 .CountAsync();
-        }
+}
     }
 }

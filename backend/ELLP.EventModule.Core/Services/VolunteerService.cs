@@ -22,7 +22,7 @@ namespace ELLP.EventModule.Core.Services
             var volunteers = await _volunteerRepository.GetAllAsync(page, pageSize);
             var totalVolunteers = await _volunteerRepository.CountAsync();
 
-            var volunteerDtos = volunteers.Select(v => MapToDto(v)).ToList();
+            var volunteerDtos = volunteers.Select(v => MapToDto(v, includeEvents: true)).ToList();
 
             return new PaginatedResponseDto<VolunteerDto>
             {
@@ -48,7 +48,7 @@ namespace ELLP.EventModule.Core.Services
             var volunteers = await _volunteerRepository.GetByEventIdAsync(eventId, page, pageSize);
             var totalVolunteers = await _volunteerRepository.CountByEventIdAsync(eventId);
 
-            var volunteerDtos = volunteers.Select(v => MapToDto(v)).ToList();
+            var volunteerDtos = volunteers.Select(v => MapToDto(v, includeEvents: true)).ToList();
 
             return new PaginatedResponseDto<VolunteerDto>
             {

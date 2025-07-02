@@ -4,6 +4,10 @@ using ELLP.EventModule.Infra.Data;
 using ELLP.EventModule.Core.Interfaces;
 using ELLP.EventModule.Core.Services;
 using ELLP.EventModule.Infra.Repositories;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System.Globalization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -34,7 +38,15 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddControllers();
+// Configura o Newtonsoft.Json como serializador padrão com formatação de data personalizada
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        // Configuração global para formatação de datas
+    options.SerializerSettings.DateFormatString = "dd/MM/yyyy HH:mm";
+    options.SerializerSettings.Culture = new CultureInfo("pt-BR");
+    options.SerializerSettings.Converters.Add(new StringEnumConverter());
+});
 
 var app = builder.Build();
 
