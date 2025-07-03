@@ -1,9 +1,3 @@
-/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.csproj.AssemblyReference.cache
-/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.GeneratedMSBuildEditorConfig.editorconfig
-/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.AssemblyInfoInputs.cache
-/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.AssemblyInfo.cs
-/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.csproj.CoreCompileInputs.cache
-/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.sourcelink.json
 /Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/bin/Debug/net8.0/ELLP.EventModule.Infra.deps.json
 /Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/bin/Debug/net8.0/ELLP.EventModule.Infra.runtimeconfig.json
 /Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/bin/Debug/net8.0/ELLP.EventModule.Infra.dll
@@ -12,6 +6,12 @@
 /Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/bin/Debug/net8.0/ELLP.EventModule.Domain.dll
 /Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/bin/Debug/net8.0/ELLP.EventModule.Core.pdb
 /Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/bin/Debug/net8.0/ELLP.EventModule.Domain.pdb
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.csproj.AssemblyReference.cache
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.AssemblyInfoInputs.cache
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.AssemblyInfo.cs
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.csproj.CoreCompileInputs.cache
+/Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.sourcelink.json
 /Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.Eve.EE93E952.Up2Date
 /Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/ELLP.EventModule.Infra.dll
 /Users/kauanzera/Documents/CertificadoraIdentitaria/backend/ELLP.EventModule.Infra/obj/Debug/net8.0/refint/ELLP.EventModule.Infra.dll

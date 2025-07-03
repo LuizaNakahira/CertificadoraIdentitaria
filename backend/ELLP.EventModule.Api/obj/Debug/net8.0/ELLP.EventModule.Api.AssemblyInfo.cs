@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ELLP.EventModule.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d26ee70eaec7717360675ffa8b8b1cd6af4aafc4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e26a44224bec148a995eb55589cd65b8852426b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ELLP.EventModule.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ELLP.EventModule.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
