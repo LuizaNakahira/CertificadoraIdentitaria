@@ -1,26 +1,54 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import styles from './Home.module.css';
+import ProximosEventos from "./ProximosEventos";
+import VoluntariosResumo from "./VoluntariosResumo";
+import styles from "./Home.module.css";
 
-function Home() {
+export default function Home() {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className={styles.container}>
-        <main className={styles.main}>
-            <Link to="/Eventos" className={styles.link}>
-                <div className={styles.menuItem}>
-                    <h2>EVENTOS</h2>
-                </div>
-            </Link>
+      <header className={styles.header}>
+        <h1 className={styles.logo}>ELLP</h1>
+        <nav className={styles.navigation}>
+          <button onClick={() => scrollToSection('eventos')} className={styles.navButton}>
+            EVENTOS
+          </button>
+          <button onClick={() => scrollToSection('voluntarios')} className={styles.navButton}>
+            VOLUNTÁRIOS
+          </button>
+        </nav>
+      </header>
 
-            <Link to="/Voluntarios" className={styles.link}>
-                <div className={styles.menuItem}>
-                    <h2>VOLUNTÁRIOS</h2>
-                </div>
-            </Link>
-        </main>
+      <main className={styles.mainContent}>
+        <section className={styles.heroSection}>
+          <h2 className={styles.heroTitle}>ELLP</h2>
+          <p className={styles.heroSubtitle}>
+            Conectando pessoas através de eventos e voluntariado. 
+            Junte-se à nossa comunidade e faça a diferença na sociedade.
+          </p>
+        </section>
 
-        <h1 className={styles.brand}>ELLP</h1>      
+        <section id="eventos" className={styles.section}>
+          <h2 className={styles.sectionTitle}>Próximos Eventos</h2>
+          <ProximosEventos />
+        </section>
+
+        <section id="voluntarios" className={styles.section}>
+          <h2 className={styles.sectionTitle}>Nossos Voluntários</h2>
+          <VoluntariosResumo />
+        </section>
+      </main>
     </div>
   );
 }
 
-export default Home;

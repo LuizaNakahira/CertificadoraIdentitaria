@@ -65,7 +65,7 @@ const eventos = [
   }
 ];
 
-const Eventos_Especificos = () => {
+const Eventos_Especificos = ( ) => {
   const { id } = useParams();
   const evento = eventos.find(e => e.id === parseInt(id));
 
@@ -76,7 +76,7 @@ const Eventos_Especificos = () => {
   return (
     <div className={styles.container}>
       <div className={styles.contentBox}>
-        <Link to="/Eventos" className={styles.voltar}>← Voltar para eventos</Link>
+        <Link to="/eventos" className={styles.voltar}>← Voltar para eventos</Link>
 
         <img src={evento.imagem} alt={evento.titulo} className={styles.imagem} />
 

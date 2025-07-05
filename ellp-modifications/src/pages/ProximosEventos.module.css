@@ -1,0 +1,88 @@
+.container {
+  padding: 0;
+  text-align: left;
+  background-color: transparent;
+}
+
+.eventosGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.eventoCard {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.eventoCard:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
+}
+
+.eventoHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.eventoImagem {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.eventoInfo {
+  flex: 1;
+}
+
+.eventoInfo h3 {
+  margin: 0 0 0.5rem 0;
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.eventoInfo p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+}
+
+.eventoMeta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.verTodosButton {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.verTodosButton:hover {
+  background-color: #f59e0b;
+  transform: translateY(-1px);
+}

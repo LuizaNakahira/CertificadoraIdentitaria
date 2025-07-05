@@ -1,117 +1,265 @@
-:global(body) {
-  margin: 0;
-  background: linear-gradient(135deg, #002960, #007BCC, #dbd5d0);;
+.pageContainer {
+  background: #ffffff;
+  min-height: 100vh;
+  padding: 0;
   font-family: Arial, sans-serif;
 }
 
-h2 {
-  font-size: clamp(24px, 5vw, 50px);
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px;
-  word-break: break-word;
-  max-width: 90%;
-  color: #002960;
+.headerSection {
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-p{
-  font-size: 20px;
-  color: #002960;
-  text-shadow: 0 0 7px rgb(255, 255, 255)
-}
-
-.data{
-  font-size: 20px;
-  color: #aca9a9;
-}
-
-.homeLink {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.voltarButton {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.voltarButton:hover {
+  background-color: #f59e0b;
+  transform: translateY(-1px);
+}
+
+.pageTitle {
+  color: #000000;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.pageSubtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+}
+
+.eventosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.eventoCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.eventoCard:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
+}
+
+.eventoHeader {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background-color: #e4d6ca;
-  padding: 8px 12px;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.eventoImagem {
+  width: 120px;
+  height: 120px;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-  text-shadow: 0 0 7px rgb(252, 252, 252);
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
 }
 
-.homeLink:hover {
-  background-color: rgb(0, 41, 96);
+.eventoCard:hover .eventoImagem {
+  border-color: #f59e0b;
 }
 
-.homeIcon {
-  font-size: 20px;
-  color: #F68D2E;
+.eventoBasicInfo {
+  flex: 1;
 }
 
-.homeText {
-  display: inline;
-  color: #F68D2E;
+.eventoTitulo {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
 }
-.eventoContainer {
-  width: 100%;
+
+.eventoCategoria {
+  color: #f59e0b;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.eventoData {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.eventoContent {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eventoSection {
+  background: #f9fafb;
+  padding: 1.2rem;
+  border-radius: 6px;
+  border-left: 3px solid #f59e0b;
+}
+
+.eventoSection h3 {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.8rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.eventoSection p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.eventoDescricao {
+  font-style: italic;
+  color: #374151;
+}
+
+.eventoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.eventoInfo p {
+  margin: 0;
+  padding: 0.3rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 0;
+  }
+  
+  .headerSection {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .eventosGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .eventoHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .eventoCard {
+    padding: 1.5rem;
+  }
+}
+
+
+/* Estilos para Paginação */
+.paginacao {
+  display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  overflow: hidden;
-  transition: all 0.1s ease;
-   min-height: 100vh; 
+  gap: 0.5rem;
+  margin: 2rem 0;
   padding: 2rem;
 }
 
+.botaoPaginacao {
+  background-color: #ffffff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 44px;
+  text-align: center;
+}
 
-.imagem {
-  width: 90%;
-  max-height: 600px;
-   max-width: 700px;
-  object-fit: contain;
-  margin: 20px 0;
+.botaoPaginacao:hover:not(.desabilitado) {
+  background-color: #f59e0b;
   color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 50px;
-  cursor: pointer;
+  border-color: #f59e0b;
+  transform: translateY(-1px);
 }
 
-.btn {
- background: linear-gradient(135deg, #9c5314, #F68D2E);
+.botaoPaginacao.ativo {
+  background-color: #f59e0b;
   color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-top: 20px;
+  border-color: #f59e0b;
+  font-weight: 600;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-  background: #002960;
+.botaoPaginacao.desabilitado {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
-.pageNumber,
-.pageArrow {
-  cursor: pointer;
-  padding: 6px 12px;
-  border-radius: 4px;
-  color: #fd7e14;
-  transition: background 0.3s;
+.botaoPaginacao.desabilitado:hover {
+  transform: none;
 }
 
-.pageNumber:hover,
-.pageArrow:hover {
-  background-color: #f5c993;
+/* Responsividade para paginação */
+@media (max-width: 768px) {
+  .paginacao {
+    gap: 0.25rem;
+    padding: 1rem;
+  }
+  
+  .botaoPaginacao {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    min-width: 36px;
+  }
 }
+
